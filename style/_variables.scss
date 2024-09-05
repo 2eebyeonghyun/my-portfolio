@@ -1,0 +1,39 @@
+$f300: NanumSquareNeo-300;
+$f400: NanumSquareNeo-400;
+$f700: NanumSquareNeo-700;
+$f800: NanumSquareNeo-800;
+$f900: NanumSquareNeo-900;
+
+$url: "../img/";
+
+$mobile: 430px;
+$tablet: 768px;
+$desktop: 1240px;
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin inner {
+    width: 100%;
+    max-width: 75%;
+    margin: 0 auto;
+
+    @include desktop {
+        max-width: 95%;
+    }
+}
